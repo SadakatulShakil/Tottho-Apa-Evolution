@@ -10,6 +10,8 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
+import '../../../../provider/theme_provider.dart';
+
 class TransactionChart extends StatefulWidget {
 
   const TransactionChart({Key? key}) : super(key: key);
@@ -86,7 +88,7 @@ class TransactionChartState extends State<TransactionChart> {
                           height: 50,width: 120,
                           padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
                           decoration: BoxDecoration(
-                            color: Theme.of(context).cardColor,
+                            color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
                             border: Border.all(width: .7,color: Theme.of(context).hintColor.withOpacity(.3)),
                             borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
 

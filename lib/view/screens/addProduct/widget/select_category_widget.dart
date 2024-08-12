@@ -9,6 +9,8 @@ import 'package:sixvalley_vendor_app/utill/color_resources.dart';
 import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
+import '../../../../provider/theme_provider.dart';
+
 class SelectCategoryWidget extends StatefulWidget {
   final Product? product;
   final ValueChanged<bool>? isSelected;
@@ -54,7 +56,7 @@ class SelectCategoryWidgetState extends State<SelectCategoryWidget> {
 
 
             Container(padding: const EdgeInsets.symmetric(horizontal:Dimensions.paddingSizeSmall),
-              decoration: BoxDecoration(color: Theme.of(context).cardColor,
+              decoration: BoxDecoration(
                 border: Border.all(width: .5, color: Theme.of(context).hintColor.withOpacity(.7)),
                 borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall)),
               child: DropdownButton<int>(
@@ -81,7 +83,7 @@ class SelectCategoryWidgetState extends State<SelectCategoryWidget> {
                 const SizedBox(height: Dimensions.paddingSizeExtraSmall,),
 
                 Container(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
-                  decoration: BoxDecoration(color: Theme.of(context).cardColor,
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
                     border: Border.all(width: .5, color: Theme.of(context).hintColor.withOpacity(.7)),),
                   child: DropdownButton<int>(
@@ -115,7 +117,7 @@ class SelectCategoryWidgetState extends State<SelectCategoryWidget> {
 
 
                 Container(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
-                  decoration: BoxDecoration(color: Theme.of(context).cardColor,
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
                     border: Border.all(width: .5, color: Theme.of(context).hintColor.withOpacity(.7)),),
                   child: DropdownButton<int>(

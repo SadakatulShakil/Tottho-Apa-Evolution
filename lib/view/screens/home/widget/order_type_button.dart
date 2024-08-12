@@ -5,6 +5,8 @@ import 'package:sixvalley_vendor_app/utill/color_resources.dart';
 import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 
+import '../../../../provider/theme_provider.dart';
+
 class OrderTypeButton extends StatelessWidget {
   final String? text;
   final String? icon;
@@ -27,7 +29,7 @@ class OrderTypeButton extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: Theme.of(context).cardColor,
+              color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
 
             ),
             child: Padding(

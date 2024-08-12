@@ -20,6 +20,8 @@ import 'package:sixvalley_vendor_app/view/screens/product/most_popular_product.d
 import 'package:sixvalley_vendor_app/view/screens/product/top_selling_product.dart';
 import 'package:sixvalley_vendor_app/view/screens/top_delivery_man/top_delivery_man_view.dart';
 
+import '../../../provider/theme_provider.dart';
+
 
 class HomePageScreen extends StatefulWidget {
   final Function? callback;
@@ -80,7 +82,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 elevation: 0,
                 centerTitle: false,
                 automaticallyImplyLeading: false,
-                backgroundColor: Theme.of(context).highlightColor,
+                backgroundColor: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
                 title: Image.asset(Images.logoWithAppName, height: 35),
               ),
               SliverToBoxAdapter(
@@ -115,15 +117,19 @@ class _HomePageScreenState extends State<HomePageScreen> {
                     const ChartWidget(),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
-                    const TopSellingProductScreen(isMain: true),
+                    Container(
+                        color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
+                        child: const TopSellingProductScreen(isMain: true)),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
                     Container(
-                      color: Theme.of(context).primaryColor,
+                      color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
                         child: const MostPopularProductScreen(isMain: true)),
                     const SizedBox(height: Dimensions.paddingSizeSmall),
 
-                    const TopDeliveryManView(isMain: true)
+                    Container(
+                        color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
+                        child: const TopDeliveryManView(isMain: true))
 
                   ],
                 ),

@@ -35,8 +35,8 @@ class MenuBottomSheet extends StatelessWidget {
 
           onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_) => const ProfileScreenView()))),
 
-      CustomBottomSheet(image: Images.myShop, title: getTranslated('my_shop', context),
-          onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const ShopScreen()))),
+      // CustomBottomSheet(image: Images.myShop, title: getTranslated('my_shop', context),
+      //     onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const ShopScreen()))),
 
       CustomBottomSheet(image: Images.addProduct, title: getTranslated('add_product', context),
           onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const AddProductScreen()))),
@@ -68,8 +68,8 @@ class MenuBottomSheet extends StatelessWidget {
           onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const WalletScreen()))),
 
 
-      CustomBottomSheet(image: Images.message, title: getTranslated('message', context),
-          onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const InboxScreen()))),
+      // CustomBottomSheet(image: Images.message, title: getTranslated('message', context),
+      //     onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const InboxScreen()))),
 
 
       CustomBottomSheet(image: Images.bankingInfo, title: getTranslated('bank_info', context),

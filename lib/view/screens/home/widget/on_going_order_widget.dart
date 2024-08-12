@@ -8,6 +8,8 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/view/screens/home/widget/order_type_button_head.dart';
 
+import '../../../../provider/theme_provider.dart';
+
 class OngoingOrderWidget extends StatelessWidget {
   final Function? callback;
   const OngoingOrderWidget({Key? key, this.callback}) : super(key: key);
@@ -19,7 +21,7 @@ class OngoingOrderWidget extends StatelessWidget {
         return Container(
           padding: const EdgeInsets.only(top: Dimensions.paddingSizeSmall),
           decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
+            color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
             boxShadow: [
               BoxShadow(color: ColorResources.getPrimary(context).withOpacity(.05),
                   spreadRadius: -3, blurRadius: 12, offset: Offset.fromDirection(0,6))],
@@ -45,7 +47,7 @@ class OngoingOrderWidget extends StatelessWidget {
                     height: 50,width: 120,
                     padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
                     decoration: BoxDecoration(
-                      color: Theme.of(context).cardColor,
+                      color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
                       border: Border.all(width: .7,color: Theme.of(context).hintColor.withOpacity(.3)),
                       borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
 

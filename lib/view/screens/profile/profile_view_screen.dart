@@ -15,6 +15,8 @@ import 'package:sixvalley_vendor_app/view/base/custom_image.dart';
 import 'package:sixvalley_vendor_app/view/screens/profile/profile_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/profile/widget/theme_changer_widget.dart';
 
+import '../../../provider/theme_provider.dart';
+
 
 
 class ProfileScreenView extends StatefulWidget {
@@ -174,10 +176,10 @@ class InfoItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(height: 120,
       decoration: BoxDecoration(
-        color: Theme.of(context).cardColor,
+        color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
         borderRadius: BorderRadius.circular(Dimensions.paddingSizeSmall),
-        boxShadow: [BoxShadow(color: ColorResources.getPrimary(context).withOpacity(.05),
-              spreadRadius: -3, blurRadius: 12, offset: Offset.fromDirection(0,6))],
+        boxShadow: [BoxShadow(color: ColorResources.getPrimary(context).withOpacity(.3),
+              spreadRadius: 2, blurRadius: 12, offset: Offset.fromDirection(0,6))],
       ),
       child: Column(mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -205,7 +207,7 @@ class InfoItem extends StatelessWidget {
 
           Text(getTranslated(title, context)!,
             textAlign: TextAlign.center,
-            style: titilliumRegular.copyWith(color:  Theme.of(context).hintColor,
+            style: titilliumRegular.copyWith(
                 fontSize: Dimensions.fontSizeDefault),),
         ],),
     );

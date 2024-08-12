@@ -46,8 +46,7 @@ class TitleRow extends StatelessWidget {
                 isDetailsPage == null ? Text(getTranslated('VIEW_ALL', context)!,
                         style: titilliumRegular.copyWith(
                           color: color ?? (isPopular? Theme.of(context).cardColor : Theme.of(context).primaryColor),
-                          fontSize: Dimensions.fontSizeDefault,
-                          decoration: TextDecoration.underline
+                          fontSize: Dimensions.fontSizeDefault
                         ))
                     : const SizedBox.shrink(),
 

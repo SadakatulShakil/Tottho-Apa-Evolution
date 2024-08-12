@@ -37,8 +37,7 @@ class MostPopularProductScreen extends StatelessWidget {
                   SizedBox(width: Dimensions.iconSizeDefault, child: Image.asset(Images.popularProductIcon)),
                   const SizedBox(width: Dimensions.paddingSizeExtraSmall),
                   Expanded(
-                    child: TitleRow(color: Colors.white, title: '${getTranslated('most_popular_products', context)}',
-                        isPopular: true,
+                    child: TitleRow(title: '${getTranslated('most_popular_products', context)}',
                         onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ProductListScreen(isPopular: true, title: 'most_popular_products')))),
                   ),
                 ],
@@ -66,7 +65,7 @@ class MostPopularProductScreen extends StatelessWidget {
                 },
               ),
             ): Padding(padding: EdgeInsets.only(top: isMain ? 0.0 :MediaQuery.of(context).size.height/3),
-              child: const NoDataScreen(title: 'no_product_found',color: Colors.white,),
+              child: const NoDataScreen(title: 'no_product_found',),
             ) :const SizedBox.shrink(),
 
             prodProvider.isLoading ? Center(child: Padding(

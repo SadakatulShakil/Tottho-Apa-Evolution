@@ -9,6 +9,8 @@ import 'package:sixvalley_vendor_app/view/base/custom_app_bar.dart';
 import 'package:sixvalley_vendor_app/view/base/custom_search_field.dart';
 import 'package:sixvalley_vendor_app/view/screens/shop/widget/all_product_widget.dart';
 
+import '../../../provider/theme_provider.dart';
+
 
 
 
@@ -36,7 +38,7 @@ class _ProductListMenuScreenState extends State<ProductListMenuScreen> {
             child: Consumer<ProductProvider>(
                 builder: (context, searchProductController, _) {
                   return Container(
-                    color: Theme.of(context).cardColor,
+                    color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).canvasColor:Theme.of(context).highlightColor,
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, Dimensions.paddingSizeDefault, Dimensions.paddingSizeDefault, Dimensions.paddingSizeDefault),
                       child: CustomSearchField(

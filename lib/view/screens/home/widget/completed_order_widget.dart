@@ -8,6 +8,8 @@ import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/utill/styles.dart';
 import 'package:sixvalley_vendor_app/view/screens/home/widget/order_type_button.dart';
 
+import '../../../../provider/theme_provider.dart';
+
 class CompletedOrderWidget extends StatelessWidget {
   final Function? callback;
   const CompletedOrderWidget({Key? key, this.callback}) : super(key: key);
@@ -18,7 +20,7 @@ class CompletedOrderWidget extends StatelessWidget {
       builder: (context, order, child) {
         return Container(
           decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
+            color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
             boxShadow: [
               BoxShadow(color: ColorResources.getPrimary(context).withOpacity(.05),
                   spreadRadius: -3, blurRadius: 12, offset: Offset.fromDirection(0,6))],

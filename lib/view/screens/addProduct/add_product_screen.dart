@@ -235,7 +235,7 @@ class AddProductScreenState extends State<AddProductScreen> with TickerProviderS
 
 
                         Container(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeSmall),
-                          decoration: BoxDecoration(color: Theme.of(context).cardColor,
+                          decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(Dimensions.paddingSizeExtraSmall),
                             border: Border.all(width: .5, color: Theme.of(context).hintColor.withOpacity(.7)),
                           ),
@@ -271,7 +271,7 @@ class AddProductScreenState extends State<AddProductScreen> with TickerProviderS
          padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),
          height: 80,
          decoration: BoxDecoration(
-           color: Theme.of(context).cardColor,
+           color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).shadowColor:Theme.of(context).highlightColor,
            boxShadow: [BoxShadow(color: Colors.grey[Provider.of<ThemeProvider>(context).darkTheme ? 800 : 200]!,
                spreadRadius: 0.5, blurRadius: 0.3)],
          ),

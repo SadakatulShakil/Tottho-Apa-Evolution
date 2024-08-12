@@ -26,7 +26,7 @@ class ThemeChanger extends StatelessWidget {
 
         Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).cardColor,
+          color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
           boxShadow: ThemeShadow.getShadow(context),),
         height : Dimensions.profileCardHeight,
         child: Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault,),
@@ -102,7 +102,7 @@ class SectionItemWidget extends StatelessWidget {
       onTap: onTap as void Function()?,
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).cardColor,
+          color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
           boxShadow: ThemeShadow.getShadow(context)),
         height: Dimensions.profileCardHeight,
         child: Padding(padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeDefault),

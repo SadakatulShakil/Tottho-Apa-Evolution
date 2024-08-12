@@ -15,6 +15,8 @@ import 'package:sixvalley_vendor_app/view/screens/pos/widget/pos_product_list.da
 import 'package:sixvalley_vendor_app/view/screens/pos/widget/pos_product_shimmer.dart';
 import 'package:sixvalley_vendor_app/view/screens/pos/widget/product_search_dialog.dart';
 
+import '../../../provider/theme_provider.dart';
+
 class POSProductScreen extends StatefulWidget {
   const POSProductScreen({Key? key}) : super(key: key);
 
@@ -51,7 +53,7 @@ class _POSProductScreenState extends State<POSProductScreen> {
                   child : Consumer<ProductProvider>(
                     builder: (context, searchProductController, _) {
                       return Container(
-                        color: Theme.of(context).cardColor,
+                        color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).hintColor:Theme.of(context).highlightColor,
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(Dimensions.paddingSizeDefault, Dimensions.paddingSizeDefault, Dimensions.paddingSizeDefault, Dimensions.paddingSizeDefault),
                           child: CustomSearchField(
