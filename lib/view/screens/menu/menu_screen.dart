@@ -10,6 +10,7 @@ import 'package:sixvalley_vendor_app/utill/dimensions.dart';
 import 'package:sixvalley_vendor_app/utill/images.dart';
 import 'package:sixvalley_vendor_app/view/base/custom_bottom_sheet.dart';
 import 'package:sixvalley_vendor_app/view/screens/addProduct/add_product_screen.dart';
+import 'package:sixvalley_vendor_app/view/screens/auth/registration_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/chat/inbox_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/coupon/widget/coupon_list_screen.dart';
 import 'package:sixvalley_vendor_app/view/screens/dashboard/nav_bar_screen.dart';
@@ -35,14 +36,19 @@ class MenuBottomSheet extends StatelessWidget {
 
           onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_) => const ProfileScreenView()))),
 
-      // CustomBottomSheet(image: Images.myShop, title: getTranslated('my_shop', context),
-      //     onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const ShopScreen()))),
-
       CustomBottomSheet(image: Images.addProduct, title: getTranslated('add_product', context),
           onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const AddProductScreen()))),
 
       CustomBottomSheet(image: Images.productIconPp, title: getTranslated('products', context),
           onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const ProductListMenuScreen()))),
+
+      CustomBottomSheet(image: Images.addIcon, title: getTranslated('add_seller', context),
+          onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const RegistrationScreen()))),
+
+
+      CustomBottomSheet(image: Images.myShop, title: getTranslated('my_seller', context),
+      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const ShopScreen()))),
+
 
       CustomBottomSheet(image: Images.reviewIcon, title: getTranslated('reviews', context),
           onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const ProductReview()))),
@@ -72,8 +78,8 @@ class MenuBottomSheet extends StatelessWidget {
       //     onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const InboxScreen()))),
 
 
-      CustomBottomSheet(image: Images.bankingInfo, title: getTranslated('bank_info', context),
-          onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const BankInfoView()))),
+      // CustomBottomSheet(image: Images.bankingInfo, title: getTranslated('bank_info', context),
+      //     onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (_)=> const BankInfoView()))),
 
 
       CustomBottomSheet(image: Images.termsAndCondition, title: getTranslated('terms_and_condition', context),

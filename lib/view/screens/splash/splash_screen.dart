@@ -62,7 +62,7 @@ class SplashScreenState extends State<SplashScreen> {
             children: [
               Hero(
                   tag:'logo',
-                  child: Image.asset(Images.whiteLogo, height: 80.0,
+                  child: Image.asset(Images.authLogo, height: 120.0,
                       fit: BoxFit.cover, width: 80.0)),
               const SizedBox(height: Dimensions.paddingSizeExtraLarge,),
               Text(AppConstants.appName, style: titilliumBold.copyWith(fontSize: Dimensions.fontSizeWallet,

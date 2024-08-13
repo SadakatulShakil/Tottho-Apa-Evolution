@@ -35,21 +35,21 @@ class RegisterSuccessfulWidget extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 2.0),
                       child: Text(getTranslated('successfully', context)!,style: robotoMedium.copyWith(color: Colors.green[600])),
                     ),
-                    Text(getTranslated('to_admin', context)!,style: robotoRegular),
+                    //Text(getTranslated('to_admin', context)!,style: robotoRegular),
                   ],
                 ),
               ),
-              Padding(
-                padding:  const EdgeInsets.symmetric(horizontal : 20),
-                child: Text(getTranslated('shop_register_message2', context)!,style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.center,),
-              ),
+              // Padding(
+              //   padding:  const EdgeInsets.symmetric(horizontal : 20),
+              //   child: Text(getTranslated('shop_register_message2', context)!,style: robotoRegular.copyWith(fontSize: Dimensions.fontSizeSmall), textAlign: TextAlign.center,),
+              // ),
             ]),
 
           Align(
           alignment: Alignment.topRight,
           child: GestureDetector(
             onTap: (){
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => const AuthScreen()));
+              Navigator.of(context).pop();
             },
             child: Padding(
               padding: const EdgeInsets.all(Dimensions.paddingSizeDefault),

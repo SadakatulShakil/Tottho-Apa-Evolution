@@ -52,7 +52,6 @@ class _InfoFieldVIewState extends State<InfoFieldVIew> {
           child: Column( crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
-
               if(!widget.isShopInfo) Column(children: [
 
 

@@ -157,7 +157,7 @@ class SignInWidgetState extends State<SignInWidget> {
                             onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ForgetPasswordScreen())),
                             child: Text(getTranslated('forget_password', context)!,
                                 style: robotoRegular.copyWith(
-                                    color: Theme.of(context).primaryColor, decoration: TextDecoration.underline)),
+                                    color: Theme.of(context).primaryColor)),
                           ),
                         ],
                       ),
@@ -215,23 +215,23 @@ class SignInWidgetState extends State<SignInWidget> {
 
                 )),
 
-                Provider.of<SplashProvider>(context, listen: false).configModel!.sellerRegistration == "1"?
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
-                  child: InkWell(
-                    onTap: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const RegistrationScreen()));
-                    },
-                    child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(getTranslated('dont_have_an_account', context)!,style: robotoRegular,),
-                        const SizedBox(width: Dimensions.paddingSizeSmall),
-                        Text(getTranslated('registration_here', context)!,
-                            style: robotoTitleRegular.copyWith(color: Theme.of(context).primaryColor, decoration: TextDecoration.underline)),
-                      ],
-                    ),
-                  ),
-                ): const SizedBox(),
+                // Provider.of<SplashProvider>(context, listen: false).configModel!.sellerRegistration == "1"?
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: Dimensions.paddingSizeDefault),
+                //   child: InkWell(
+                //     onTap: (){
+                //       Navigator.of(context).push(MaterialPageRoute(builder: (_) => const RegistrationScreen()));
+                //     },
+                //     child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                //       children: [
+                //         Text(getTranslated('dont_have_an_account', context)!,style: robotoRegular,),
+                //         const SizedBox(width: Dimensions.paddingSizeSmall),
+                //         Text(getTranslated('registration_here', context)!,
+                //             style: robotoTitleRegular.copyWith(color: Theme.of(context).primaryColor, decoration: TextDecoration.underline)),
+                //       ],
+                //     ),
+                //   ),
+                // ): const SizedBox(),
 
 
                 Padding(

@@ -33,16 +33,17 @@ class AuthScreen extends StatelessWidget{
                               tag: 'logo',
                               child: Padding(
                                 padding: const EdgeInsets.only(top : Dimensions.paddingSizeExtraLarge),
-                                child: Image.asset(Images.logo,width: 80),
+                                child: Image.asset(Images.authLogo,width: 120),
                               )),
                           Row(mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(getTranslated('seller', context)!,
-                                  style: robotoMedium.copyWith(fontSize: Dimensions.fontSizeExtraLargeTwenty)),
-                              const SizedBox(width: Dimensions.paddingSizeExtraSmall),
-                              Text(getTranslated('app', context)!,
                                   style: robotoMedium.copyWith(color: Theme.of(context).primaryColor,
                                       fontSize: Dimensions.fontSizeExtraLargeTwenty)),
+                              const SizedBox(width: Dimensions.paddingSizeExtraSmall),
+                              // Text(getTranslated('app', context)!,
+                              //     style: robotoMedium.copyWith(color: Theme.of(context).primaryColor,
+                              //         fontSize: Dimensions.fontSizeExtraLargeTwenty)),
                             ],
                           )
                         ],

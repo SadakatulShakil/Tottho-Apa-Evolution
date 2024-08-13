@@ -17,6 +17,8 @@ import 'package:sixvalley_vendor_app/view/base/custom_snackbar.dart';
 import 'package:sixvalley_vendor_app/view/screens/auth/widgets/info_field_view.dart';
 import 'package:sixvalley_vendor_app/view/screens/auth/widgets/register_successfull_dialog.dart';
 
+import '../../../provider/theme_provider.dart';
+
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
 
@@ -61,7 +63,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> with TickerProv
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                color: Theme.of(context).cardColor,
+                color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).shadowColor:Theme.of(context).highlightColor,
                 child: TabBar(
                   padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeExtraLarge),
                   controller: _tabController,
@@ -115,7 +117,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> with TickerProv
                 Container(height: 70,
                   padding: const EdgeInsets.symmetric(vertical : Dimensions.paddingSizeSmall, horizontal: Dimensions.paddingSizeDefault),
                   decoration: BoxDecoration(
-                      color: Theme.of(context).cardColor
+                      color: Provider.of<ThemeProvider>(context).darkTheme? Theme.of(context).shadowColor:Theme.of(context).highlightColor,
                   ),
                   child:(authProvider.selectionTabIndex ==1)?
                   CustomButton(btnTxt: getTranslated('next', context), onTap: (){

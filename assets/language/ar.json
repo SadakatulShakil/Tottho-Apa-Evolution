@@ -162,6 +162,8 @@
   "shop_name" : "اسم المحل",
   "contact_number" : "رقم الاتصال",
   "add_product" : "أضف منتج",
+  "add_seller" : "Add seller",
+  "my_seller" : "My seller",
   "earning_statistic" : "إحصاء الكسب",
   "shop_info_updated_successfully": "تم تحديث معلومات المتجر بنجاح",
   "out_delivery" : " خارج ل توصيل",

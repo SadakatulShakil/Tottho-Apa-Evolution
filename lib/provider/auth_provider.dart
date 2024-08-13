@@ -289,6 +289,7 @@ class AuthProvider with ChangeNotifier {
       showCustomSnackBar(getTranslated("you_are_successfully_registered", Get.context!), Get.context!, isError: false);
 
     }else {
+      print('iiiiiii: '+response.response!.statusCode.toString());
       _isLoading = false;
       Map map = response.response!.data;
       String? message = map['message'];
